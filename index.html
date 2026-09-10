@@ -1049,7 +1049,7 @@ body::after {
         <div class="name user-nama">Siswa</div>
         <div class="grade user-kelas">Grade 4</div>
       </div>
-      <button class="btn-logout">Logout</button>
+      <button class="btn-logout" onclick="logoutUser()">Logout</button>
     </div>
   </div>
 
@@ -1552,6 +1552,31 @@ body::after {
       coinElem.innerText = totalCoins.toLocaleString('id-ID');
     }
   }
+
+
+// =====================================================
+// FUNGSI LOGOUT
+// =====================================================
+function logoutUser() {
+    // Hapus data sesi/login jika digunakan
+    sessionStorage.clear();
+
+    // Jika sebelumnya menggunakan localStorage untuk login,
+    // baris berikut bisa digunakan:
+    // localStorage.removeItem("login");
+
+    // URL WEBSITE LOGIN
+    const LOGIN_URL = "https://operatorsdittihamah.github.io/LOGINRUMAHBELAJARBERKAH/";
+
+    // Pindah ke halaman login
+    window.location.href = LOGIN_URL;
+}
+
+
+
+
+
+  
 </script>
 
 </body>
